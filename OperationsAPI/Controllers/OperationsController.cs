@@ -100,6 +100,7 @@ namespace OperationsAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{id:guid}")]
         public async Task<IActionResult> SoftDelete([FromRoute] Guid id)
         {
             // bir iletişim bilgisi dışarıdan id girilerek bulunmaya çalışılıyor
