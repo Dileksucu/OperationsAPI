@@ -68,7 +68,6 @@ namespace OperationsAPI.Controllers
 
         }
 
-
         [HttpPatch]
         [Route("{id:guid}")]
         public async Task<IActionResult> UpdatePatch([FromRoute] Guid id, [FromBody] UpdateOperationPatchCommand command) 
@@ -117,7 +116,7 @@ namespace OperationsAPI.Controllers
             // ardından bu alan kayıt üzerinde güncellenir.
             _context.Operations.Update(contact);
             await _context.SaveChangesAsync();
-            return Ok("İletişim bilgilerini sildim, mutlu musun şimdi? Dilom benim");
+            return Ok("İletişim bilgileri silindi.");
 
         }
 
